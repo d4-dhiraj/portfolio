@@ -333,6 +333,119 @@ header .navbar ul li a:hover{
 }
 /* common media queries ends*/
 
+/* Full projects grid: content-driven cards with visible actions. */
+.work {
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.work .box-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem;
+  width: min(100%, 110rem);
+  margin: 2.5rem auto 3rem;
+}
+
+.work .box-container .grid-item {
+  min-width: 0;
+}
+
+.work .box-container .box {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  height: auto;
+  min-width: 0;
+  margin: 0;
+  border-radius: 0.8rem;
+}
+
+.work .box-container .box img {
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.work .box-container .box .content {
+  position: static;
+  width: 100%;
+  height: auto;
+  min-height: 19rem;
+  background: #fff;
+}
+
+.work .box-container .box .content .tag {
+  min-height: 5rem;
+  height: auto;
+  padding: 1.2rem 1.5rem;
+}
+
+.work .box-container .box .content .tag h3 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.work .box-container .box .desc {
+  flex: 1;
+  margin: 1.5rem;
+}
+
+.work .box-container .box .desc p {
+  margin: 0;
+  color: #252525;
+  font-size: 1.45rem;
+  line-height: 1.55;
+}
+
+.work .box-container .box .desc .btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+.work .box-container .box .desc .btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 12rem;
+  min-height: 4.2rem;
+  margin: 0;
+  padding: 1rem 1.2rem;
+  font-size: 1.35rem;
+  white-space: nowrap;
+}
+
+.work .box-container .box:hover .content {
+  top: auto;
+}
+
+@media (max-width: 600px) {
+  .work {
+    padding-bottom: 3.5rem;
+  }
+
+  .work .box-container {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin: 2rem 0 2.5rem;
+  }
+
+  .work .box-container .box img {
+    height: 18rem;
+  }
+
+  .work .box-container .box .content {
+    min-height: 0;
+  }
+
+  .work .box-container .box .desc .btns .btn {
+    flex-basis: 0;
+  }
+}
+
 
 /* scroll top starts */
 #scroll-top{
@@ -351,3 +464,132 @@ header .navbar ul li a:hover{
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* Final responsive page spacing and filters. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.work {
+  min-height: auto;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.work .heading {
+  margin-bottom: 1rem;
+}
+
+.work .button-group {
+  width: min(100%, 72rem);
+  margin: 1.5rem auto 2.8rem;
+  padding-inline: 0.5rem;
+}
+
+.work .button-group .btn {
+  min-height: 4.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.work .box-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem;
+  width: min(100%, 110rem);
+  margin: 0 auto 3rem;
+}
+
+.work .box-container .grid-item {
+  min-width: 0;
+}
+
+.work .box-container .box {
+  width: 100% !important;
+  min-width: 0;
+  margin: 0;
+}
+
+.work .box-container .box .content {
+  position: static;
+  height: auto;
+  min-height: 19rem;
+}
+
+.work .box-container .box img {
+  display: block;
+  height: 20rem;
+}
+
+.work .box-container .box .desc .btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.work .box-container .box .desc .btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 12rem;
+  min-height: 4.2rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.work .box-container .box:hover .content {
+  top: auto;
+}
+
+.backbtn {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .work {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .work .button-group {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-inline: 0;
+  }
+
+  .work .button-group .btn {
+    flex: 1 1 calc(50% - 0.8rem);
+    padding-inline: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .work .box-container {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .work .box-container .box img {
+    height: 18rem;
+  }
+
+  .work .box-container .box .content {
+    min-height: 0;
+  }
+
+  .work .box-container .box .desc .btns .btn {
+    flex-basis: 0;
+    padding-inline: 0.8rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .work .button-group .btn {
+    flex-basis: 100%;
+  }
+}

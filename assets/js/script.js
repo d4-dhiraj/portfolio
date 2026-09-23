@@ -91,23 +91,54 @@ async function fetchData(type = "skills") {
 
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
+        const groups = [
+                {
+                        title: "Languages",
+                        skills: ["C++", "JavaScript", "HTML5", "CSS3"]
+                },
+                {
+                        title: "Frontend",
+                        skills: ["ReactJS", "TailwindCSS", "Bootstrap"]
+                },
+                {
+                        title: "Backend & Database",
+                        skills: ["NodeJS", "ExpressJS", "MongoDB", "REST API"]
+                },
+                {
+                        title: "Tools & Platforms",
+                        skills: ["Git", "GitHub", "Linux", "Cloudinary"]
+                },
+                {
+                        title: "Problem Solving & AI",
+                        skills: ["Data Structures & Algorithms", "Competitive Programming", "Gemini API"]
+                }
+        ];
+
+        const skillByName = new Map(skills.map(skill => [skill.name, skill]));
+        let skillHTML = groups.map(group => `
+                <article class="skill-group">
+                    <h3>${group.title}</h3>
+                    <div class="skill-list">
+                        ${group.skills.map(name => {
+                                const skill = skillByName.get(name);
+                                if (!skill) return "";
+                                return `
+                                    <div class="skill-item">
+                                        <img src="${skill.icon}" alt="${skill.name} icon" />
+                                        <span>${skill.name}</span>
+                                    </div>`;
+                        }).join("")}
+                    </div>
+                </article>
+        `).join("");
+
     skillsContainer.innerHTML = skillHTML;
 }
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+    projects.slice(0, 3).filter(project => project.category != "android").forEach(project => {
         projectHTML += `
         <div class="box tilt">
       <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
@@ -118,8 +149,8 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            <a href="${project.links.view}" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> Live Demo</a>
+            <a href="${project.links.code}" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i> GitHub</a>
           </div>
         </div>
       </div>

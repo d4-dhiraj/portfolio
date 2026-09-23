@@ -31,6 +31,7 @@
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#coding-profiles">Profiles</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -48,9 +49,14 @@
     <div class="content">
     <h2>Hi There,<br/> I'm Dhiraj <span>Maurya</span></h2>
     <p>i am into <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
+    <div class="hero-actions">
+      <a href="#about" class="btn"><span>About Me</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+      <a href="#work" class="btn btn-outline"><span>View My Work</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
     <div class="socials">
         <ul class="social-icons">
           <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/d4-dhiraj/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
@@ -83,10 +89,8 @@
         <span class="tag">Full Stack Developer</span>
         
         <p>
-I'm a <b>Backend-focused Developer</b> with experience in building web applications using the <b>MERN stack</b>. Currently, I'm strengthening my problem-solving skills through <b>Data Structures & Algorithms</b>, exploring <b>Competitive Programming</b>, and actively contributing to <b>Open Source</b> .
-
-I enjoy building things, learning new technologies, solving problems, and improving my development skills through real-world projects. I've also contributed to open-source projects through documentation improvements, frontend changes, and minor bug fixes.
-</p>
+          <b>Backend-focused developer</b> working with the <b>MERN stack.</b> Currently exploring <b>DSA</b>, <b>Competitive Programming</b>, and <b>Open Source</b> while building real-world projects and improving my development skills.
+        </p>
         
         <div class="box-container">
             <!-- <div class="box">
@@ -113,7 +117,7 @@ I enjoy building things, learning new technologies, solving problems, and improv
 <!-- skills section starts -->
 <section class="skills" id="skills">
 
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Technologies</span></h2>
 
     <div class="container">
           <div class="row" id="skillsContainer">
@@ -129,6 +133,57 @@ I enjoy building things, learning new technologies, solving problems, and improv
 </div>
 </section>
 <!-- skills section ends -->
+
+<!-- coding profiles section starts -->
+<section class="coding-profiles" id="coding-profiles">
+  <h2 class="heading"><i class="fas fa-code"></i> Coding <span>Profiles</span></h2>
+  <p class="profiles-intro">Find me on these platforms and explore my problem-solving journey.</p>
+
+  <div class="profiles-grid">
+    <a class="profile-card" href="https://leetcode.com/u/d4-dhiraj/" target="_blank" rel="noopener noreferrer">
+      <span class="profile-icon">
+        <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode logo" />
+      </span>
+      <span class="profile-details">
+        <strong>LeetCode</strong>
+        <small>DSA & Problems</small>
+      </span>
+      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+    </a>
+
+    <a class="profile-card" href="https://codeforces.com/profile/d4-dhiraj" target="_blank" rel="noopener noreferrer">
+      <span class="profile-icon">
+        <img src="https://cdn.simpleicons.org/codeforces/1F8ACB" alt="Codeforces logo" />
+      </span>
+      <span class="profile-details">
+        <strong>Codeforces</strong>
+        <small>Competitive Programming</small>
+      </span>
+      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+    </a>
+
+    <a class="profile-card" href="https://codolio.com/profile/d4-dhiraj" target="_blank" rel="noopener noreferrer">
+      <span class="profile-icon">
+        <img src="https://codolio.com/favicon.ico" alt="Codolio logo" />
+      </span>
+      <span class="profile-details">
+        <strong>Codolio</strong>
+        <small>DSA Progress</small>
+      </span>
+      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+    </a>
+
+    <a class="profile-card" href="https://github.com/d4-dhiraj" target="_blank" rel="noopener noreferrer">
+      <span class="profile-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+      <span class="profile-details">
+        <strong>GitHub</strong>
+        <small>Projects & Open Source</small>
+      </span>
+      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
+<!-- coding profiles section ends -->
 
 
 <!-- education section starts -->
@@ -159,7 +214,7 @@ I enjoy building things, learning new technologies, solving problems, and improv
 <!-- work project section starts -->
 <section class="work" id="work">
 
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Featured <span>Projects</span></h2>
 
   <div class="box-container">
 
@@ -167,7 +222,7 @@ I enjoy building things, learning new technologies, solving problems, and improv
 </div>
 
 <div class="viewall">
-  <a href="/projects" class="btn"><span>View All</span>
+  <a href="/projects" class="btn"><span>View All Projects</span>
     <i class="fas fa-arrow-right"></i>
 </a>
 </div>
@@ -175,68 +230,25 @@ I enjoy building things, learning new technologies, solving problems, and improv
 </section>
 <!-- work project section ends -->
 
-```html
 <!-- experience section starts --> 
 <section class="experience" id="experience"> 
  
   <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2> 
  
-  <div class="timeline"> 
- 
-    <div class="container right"> 
-      <div class="content"> 
-        <div class="tag"> 
-          <h2>Open Source</h2> 
-        </div> 
-        <div class="desc"> 
-            <h3>Open Source Contributor</h3> 
-            <p>2026 - Present</p> 
-        </div> 
-      </div> 
-    </div> 
- 
-    <div class="container left"> 
-      <div class="content"> 
-        <div class="tag"> 
-          <h2>freeCodeCamp</h2> 
-        </div> 
-        <div class="desc"> 
-            <h3>Open Source Contributor</h3> 
-            <p>2026</p> 
-        </div> 
-      </div> 
-    </div> 
- 
-
- 
-    <div class="container right"> 
-      <div class="content"> 
-        <div class="tag"> 
-          <h2>GSSoC</h2> 
-        </div> 
-        <div class="desc"> 
-            <h3>Open Source Contributor</h3> 
-            <p>2026</p> 
-        </div> 
-      </div> 
-    </div> 
- 
-    <div class="container left"> 
-      <div class="content"> 
-        <div class="tag"> 
-          <h2>SWoC</h2> 
-        </div> 
-        <div class="desc"> 
-            <h3>Open Source Contributor</h3> 
-            <p>2026</p> 
-        </div> 
-      </div> 
-    </div> 
- 
-  </div> 
+  <div class="experience-card">
+    <div class="experience-card__header">
+      <span class="experience-card__label">Open Source</span>
+      <span class="experience-card__date">2026 - Present</span>
+    </div>
+    <h3>Open Source Contributor</h3>
+    <ul>
+      <li>Contributing improvements to community projects.</li>
+      <li>Working across documentation, frontend changes, and bug fixes.</li>
+    </ul>
+  </div>
  
   <div class="morebtn"> 
-    <a href="/experience" class="btn"><span>View All</span> 
+    <a href="/experience" class="btn"><span>View All Experience</span> 
       <i class="fas fa-arrow-right"></i> 
     </a> 
   </div> 
