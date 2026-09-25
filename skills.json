@@ -69,6 +69,6 @@
     },
     {
         "name": "Cloudinary",
-        "icon": "https://cloudinary.com/favicon.ico"
+        "icon": "./assets/images/cloudinary.ico"
     }
 ]
