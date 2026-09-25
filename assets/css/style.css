@@ -1165,6 +1165,7 @@ form .button-area {
 }
 .footer .credit a {
   color: #ffae00;
+  text-decoration: underline;
 }
 .footer .fa {
   color: #e90606;
